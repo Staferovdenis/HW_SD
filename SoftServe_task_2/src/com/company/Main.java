@@ -1,6 +1,6 @@
 package com.company;
 
-public class Main {
+public class Main{
 
     public static void main(String[] args) {
         Person person1 = new Person();
@@ -20,12 +20,12 @@ public class Main {
         Employee employee3 = new Employee("Alex",12,34);
 
         System.out.println();
-        System.out.println(employee1.totalSum());
-        System.out.println(employee1.totalSum() + employee2.totalSum() + employee3.totalSum());//400+900+408(40+90+40)=1878
+        System.out.println(Employee.getTotalSum());
         System.out.println();
         employee1.changeRate(20);
-        System.out.println(employee1.totalSum());
-        System.out.println(employee1.totalSum() + employee2.totalSum() + employee3.totalSum());//
+        System.out.println(Employee.getTotalSum());
+
+
 
 
     }
