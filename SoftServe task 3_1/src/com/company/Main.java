@@ -10,12 +10,17 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        Dog Terrier = new Dog("Tery",4,"Terrier");
-        Dog dog = new Dog("Tery",5,"Dog");
-        Dog jax = new Dog("Jax",9,"Beagle");
-        System.out.println(dog.getBreed());
+        Dog Terrier = new Dog("Tery",4, Dog.Breed.Basenji);
+        Dog dog = new Dog("Tery",5, Dog.Breed.Terrier);
+        Dog jax = new Dog("Jax",9, Dog.Breed.Beagle);
+
         System.out.println(chekName(Terrier,dog));
 
+        if(Terrier.getAge()<dog.getAge() && dog.getAge()> jax.getAge()){
+            System.out.println("dog is oldest dog");
+        }else if(jax.getAge()>Terrier.getAge()&&jax.getAge()>dog.getAge()){
+            System.out.println("jax is oldest dog");
+        }else System.out.println("Terrier is oldest dog");
 
 
         /*System.out.println("Enter you error code");

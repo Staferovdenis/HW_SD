@@ -5,9 +5,9 @@ import java.util.Objects;
 public class Dog {
     private String name;
     private int age;
-    private String breed;
+    private Breed breed;
 
-    public Dog(String name, int age, String breed) {
+    public Dog(String name, int age, Breed breed) {
         this.name = name;
         this.age = age;
         this.breed = breed;
@@ -21,12 +21,14 @@ public class Dog {
         return age;
     }
 
-    public String getBreed() {
+    public Breed getBreed() {
         return breed;
     }
 
-enum breed{
-    Terrier,Basenji,Beagle;
+enum Breed{
+    Terrier,
+    Basenji,
+    Beagle
 
 }
 
