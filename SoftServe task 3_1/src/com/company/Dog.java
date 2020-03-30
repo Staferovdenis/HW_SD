@@ -25,12 +25,7 @@ public class Dog {
         return breed;
     }
 
-enum Breed{
-    Terrier,
-    Basenji,
-    Beagle
 
-}
 
     @Override
     public boolean equals(Object o) {
@@ -44,4 +39,10 @@ enum Breed{
     public int hashCode() {
         return Objects.hash(name, age, breed);
     }
+}
+enum Breed{
+    Terrier,
+    Basenji,
+    Beagle
+
 }

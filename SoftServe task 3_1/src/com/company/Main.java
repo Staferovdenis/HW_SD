@@ -10,9 +10,9 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        Dog Terrier = new Dog("Tery",4, Dog.Breed.Basenji);
-        Dog dog = new Dog("Tery",5, Dog.Breed.Terrier);
-        Dog jax = new Dog("Jax",9, Dog.Breed.Beagle);
+        Dog Terrier = new Dog("Tery",4, Breed.Basenji);
+        Dog dog = new Dog("Tery",5, Breed.Terrier);
+        Dog jax = new Dog("Jax",9, Breed.Beagle);
 
         System.out.println(chekName(Terrier,dog));
 
