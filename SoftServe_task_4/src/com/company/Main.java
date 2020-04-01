@@ -26,10 +26,10 @@ public class Main {
         }
         System.out.println();
         for (int i = 0; i < employers.length - 1; i++) {
-            for (int j = 0; j < employers.length - 1; j++) {
-                if (employers[j].getSalary() < employers[j + 1].getSalary()) {
-                    Employee tmp = employers[j + 1];
-                    employers[j + 1] = employers[j];
+            for (int j = i+1; j < employers.length; j++) {
+                if (employers[i].getSalary() < employers[j].getSalary()) {
+                    Employee tmp = employers[i];
+                    employers[i] = employers[j];
                     employers[j] = tmp;
                 }
             }
