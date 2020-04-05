@@ -2,10 +2,12 @@ package com.company;
 
 public class Cleaner extends Staff {
 
-    String TYPE_PERSON;
+  final Class<Cleaner> TYPE_PERSON;
 
     public Cleaner() {
+        this.TYPE_PERSON = Cleaner.class;
     }
+
 
     @Override
     public int salary() {
@@ -14,6 +16,6 @@ public class Cleaner extends Staff {
 
     @Override
     public void print() {
-        System.out.println("I am a Cleaner");
+        System.out.println("I am a " + TYPE_PERSON);
     }
 }
