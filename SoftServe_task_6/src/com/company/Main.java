@@ -3,6 +3,7 @@ package com.company;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 
 
 public class Main {
@@ -21,10 +22,10 @@ public class Main {
         for (Integer i : newCollection) {
             System.out.println(i);
         }
-        for (int i = 0; i < myCollection.size(); i++) {
-            if (myCollection.get(i) > 8) {
-                myCollection.remove(i);
-                i--;
+        Iterator<Integer> iterator = myCollection.iterator();
+        while (iterator.hasNext()) {
+            if (iterator.next() > 8 ) {
+                iterator.remove();
             }
         }
         System.out.println();
