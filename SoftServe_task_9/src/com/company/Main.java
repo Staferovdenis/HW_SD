@@ -1,9 +1,6 @@
 package com.company;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +10,7 @@ import static java.lang.Integer.MIN_VALUE;
 public class Main {
 
     public static void main(String[] args) throws InterruptedException, FileNotFoundException {
-        FileReader fr = new FileReader("C:\\Users\\d.staferov\\IdeaProjects\\SoftServe_task_9\\src\\com\\company\\mytext.txt");
+        FileReader fr = new FileReader(new File("src\\com\\company").getAbsolutePath() + File.separator + "mytext.txt");
         BufferedReader br = new BufferedReader(fr);
         List<String> strings = new ArrayList<>();
         int maxLength = MIN_VALUE;
