@@ -23,16 +23,19 @@ public class Main {
         answer(chekUserName(s4));
         answer(chekUserName(s5));
 
-        try {
-            System.out.println("Please, enter surname, name and patronymic");
-            String str = reader.readLine();
-            String[] s = str.split(" ");
-            System.out.println(s[0] + " " + s[1].substring(0, 1) + "." + s[2].substring(0, 1) + ".");
-            System.out.println(s[1]);
-            System.out.println(s[1] + " " + s[2] + " " + s[0]);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        String surname = "staferov";
+        String name = "denis";
+        String patronymic = "yurievich";
+        StringBuilder r = new StringBuilder();
+        r.append(surname).append(" "+name).append(" "+patronymic);
+        r.delete(10,14);
+        r.delete(12,21);
+        System.out.println(r);
+        r.delete(0,12);
+        r.append(name);
+        System.out.println(r);
+        r.append(" "+patronymic).append(" "+surname);
+        System.out.println(r);
 
         System.out.println();
 
