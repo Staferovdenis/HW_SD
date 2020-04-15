@@ -27,11 +27,14 @@ public class Main {
         String name = "denis";
         String patronymic = "yurievich";
         StringBuilder r = new StringBuilder();
-        r.append(surname).append(" "+name).append(" "+patronymic);
-        r.delete(10,14);
-        r.delete(12,21);
+        r.append(surname);
+        r.append(" ");
+        r.append( name,0,1);
+        r.append(". ");
+        r.append(patronymic,0,1);
+        r.append(". ");
         System.out.println(r);
-        r.delete(0,12);
+        r.delete(0,15);
         r.append(name);
         System.out.println(r);
         r.append(" "+patronymic).append(" "+surname);
